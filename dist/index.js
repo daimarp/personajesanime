@@ -13,7 +13,7 @@ server.app.use(body_parser_1.default.json());
 server.app.use(body_parser_1.default.urlencoded({ extended: true }));
 server.app.use('/', default_routes_1.default);
 server.app.use('/personaje', personaje_routes_1.default);
-mongoose_1.default.connect('mongodb://localhost:27017/personajesdb', (error) => {
+mongoose_1.default.connect('mongodb+srv://usr_personajes:personajes2022@cluster0.trpyyhp.mongodb.net/personajesdb', (error) => {
     if (error) {
         throw error;
     }

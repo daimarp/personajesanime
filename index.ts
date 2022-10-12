@@ -11,7 +11,7 @@ server.app.use(bodyParser.urlencoded({extended:true}));
 server.app.use('/',defaultroutes);
 server.app.use('/personaje',personajesRoutes);
 
-mongoose.connect('mongodb://localhost:27017/personajesdb',(error)=>{
+mongoose.connect('mongodb+srv://usr_personajes:personajes2022@cluster0.trpyyhp.mongodb.net/personajesdb',(error)=>{
     if (error) {
         throw error;
         
