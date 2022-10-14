@@ -13,6 +13,9 @@ const personajeSchema = new Schema({
     },
     descripcion:{
         type:String
+    },
+    url:{
+        type:String
     }
 
 
@@ -22,6 +25,7 @@ nombre:string;
 edad:number;
 imagen:string;
 descripcion:string;
+url:string;
 }
 
 export const Personaje =model<Ipersonaje>('Personaje',personajeSchema);

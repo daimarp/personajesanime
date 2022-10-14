@@ -1,4 +1,4 @@
-import { Request, request, Response, response, Router } from "express";
+import { Request, Response, Router } from "express";
 import { Personaje } from "../models/personaje.model";
 
 const personajesRoutes = Router();
@@ -37,9 +37,10 @@ const personaje ={
     nombre: data.nombre,
     edad: data.edad,
     imagen: data.imagen,
-    descripcion: data.descripcion
+    descripcion: data.descripcion,
+    url: data.url
 }
-
+console.log(personaje);
 Personaje.create(personaje).then(personajeDb=>{
     console.log(personajeDb);
 
@@ -74,7 +75,9 @@ const personaje ={
     nombre:req.body.nombre,
     edad: req.body.edad,
     imagen:req.body.imagen,
-    descripcion:req.body.descripcion
+    descripcion:req.body.descripcion,
+    url:req.body.url
+
 }
 
 Personaje.findByIdAndUpdate(personajeId,personaje).then(personajeDb=>{

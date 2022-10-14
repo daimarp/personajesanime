@@ -36,8 +36,10 @@ personajesRoutes.post('/', (req, res) => {
         nombre: data.nombre,
         edad: data.edad,
         imagen: data.imagen,
-        descripcion: data.descripcion
+        descripcion: data.descripcion,
+        url: data.url
     };
+    console.log(personaje);
     personaje_model_1.Personaje.create(personaje).then(personajeDb => {
         console.log(personajeDb);
         return res.json({
@@ -59,7 +61,8 @@ personajesRoutes.put('/:id', (req, res) => {
         nombre: req.body.nombre,
         edad: req.body.edad,
         imagen: req.body.imagen,
-        descripcion: req.body.descripcion
+        descripcion: req.body.descripcion,
+        url: req.body.url
     };
     personaje_model_1.Personaje.findByIdAndUpdate(personajeId, personaje).then(personajeDb => {
         return res.json({

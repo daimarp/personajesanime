@@ -15,6 +15,9 @@ const personajeSchema = new mongoose_1.Schema({
     },
     descripcion: {
         type: String
+    },
+    url: {
+        type: String
     }
 });
 exports.Personaje = (0, mongoose_1.model)('Personaje', personajeSchema);
