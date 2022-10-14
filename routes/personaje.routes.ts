@@ -36,7 +36,8 @@ const data = req.body;
 const personaje ={
     nombre: data.nombre,
     edad: data.edad,
-    imagen: data.imagen
+    imagen: data.imagen,
+    descripcion: data.descripcion
 }
 
 Personaje.create(personaje).then(personajeDb=>{
@@ -72,7 +73,8 @@ const personaje ={
 
     nombre:req.body.nombre,
     edad: req.body.edad,
-    imagen:req.body.imagen
+    imagen:req.body.imagen,
+    descripcion:req.body.descripcion
 }
 
 Personaje.findByIdAndUpdate(personajeId,personaje).then(personajeDb=>{

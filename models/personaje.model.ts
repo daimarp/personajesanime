@@ -10,13 +10,18 @@ const personajeSchema = new Schema({
     },
     imagen:{
         type:String
+    },
+    descripcion:{
+        type:String
     }
+
 
 })
 interface Ipersonaje extends Document{
 nombre:string;
 edad:number;
 imagen:string;
+descripcion:string;
 }
 
 export const Personaje =model<Ipersonaje>('Personaje',personajeSchema);

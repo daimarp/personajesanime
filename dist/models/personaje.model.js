@@ -12,6 +12,9 @@ const personajeSchema = new mongoose_1.Schema({
     },
     imagen: {
         type: String
+    },
+    descripcion: {
+        type: String
     }
 });
 exports.Personaje = (0, mongoose_1.model)('Personaje', personajeSchema);
